@@ -1,0 +1,196 @@
+                /* =====***** common css starts *****===== */
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                ul {
+                    list-style: none;
+                    margin-bottom: 0 !important;
+                }
+                
+                a {
+                    text-decoration: none !important;
+                }
+                
+                img {
+                    vertical-align: centert;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                /* =====***** common css ends *****===== */
+                
+                @import 'variable.scss';
+                /* =====***** navbar css starts *****===== */
+                
+                #preloader-bg {
+                    width: 100%;
+                    height: 100vh;
+                    background: black;
+                    position: fixed;
+                    z-index: 999999999999999999999999;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 90%;
+                        height: 100%;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        margin: 0 auto;
+                    }
+                }
+                
+                .navbar {
+                    border-bottom: 1px solid $brandcolor;
+                    padding: 0 !important;
+                    position: absolute !important;
+                    top: 20px;
+                    width: 100%;
+                    z-index: 999999999;
+                    position: relative;
+                    .navbar-nav {
+                        .nav-item {
+                            .nav-link {
+                                @include ralewaymd16;
+                                margin: 0 10px;
+                                @include transition;
+                                &:hover {
+                                    color: $brandcolor;
+                                }
+                                &.active {
+                                    color: $brandcolor;
+                                    position: relative;
+                                    border-bottom: 2px solid $brandcolor;
+                                }
+                            }
+                        }
+                    }
+                }
+                /* =====***** navbar css ends *****===== */
+                /* =====***** banner css starts *****===== */
+                
+                #banner-bg {
+                    position: relative;
+                    .prevarrow {
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%);
+                        left: 100px;
+                        color: white;
+                        font-size: 18px;
+                        z-index: 99999999;
+                        @include transition;
+                        &:hover {
+                            color: $brandcolor;
+                            &::after {
+                                border-color: $brandcolor;
+                            }
+                        }
+                        &::after {
+                            content: '';
+                            width: 50px;
+                            height: 50px;
+                            border: 2px solid white;
+                            position: absolute;
+                            top: -16px;
+                            left: -17px;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            @include transition;
+                        }
+                    }
+                    .nextarrow {
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%);
+                        right: 100px;
+                        color: white;
+                        font-size: 18px;
+                        z-index: 99999999;
+                        @include transition;
+                        &:hover {
+                            color: $brandcolor;
+                            &::after {
+                                border-color: $brandcolor;
+                            }
+                        }
+                        &::after {
+                            content: '';
+                            width: 50px;
+                            height: 50px;
+                            border: 2px solid white;
+                            position: absolute;
+                            top: -16px;
+                            left: -17px;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            @include transition;
+                        }
+                    }
+                    .item {
+                        position: relative;
+                        z-index: 1;
+                        padding: 245px 0 140px 0;
+                        clip-path: polygon(0 0, 100% 1%, 100% 87%, 0% 100%);
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.8);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: -1;
+                        }
+                    }
+                    .item-1 {
+                        background: url(../image/banner-img.png) center / cover no-repeat;
+                    }
+                    .item-2 {
+                        background: url(../image/banner-2.png) center / cover no-repeat;
+                    }
+                    .item-3 {
+                        background: url(../image/banner-3.png) center / cover no-repeat;
+                    }
+                    .banner-text {
+                        text-align: center;
+                        h4 {
+                            @include heading;
+                            font-size: 36px;
+                            color: $navfontcol;
+                            margin-bottom: 0;
+                        }
+                        h2 {
+                            @include heading;
+                            font-size: 55px;
+                            color: $brandcolor;
+                        }
+                        p {
+                            @include pfont;
+                            padding: 0 35px;
+                        }
+                        a {
+                            display: inline-block;
+                            padding: 20px 35px;
+                            border: 1px solid $brandcolor;
+                            margin: 50px 20px 0 20px;
+                            text-transform: capitalize;
+                            @include ralewaymd16;
+                            @include transition;
+                            &:hover {
+                                background: $brandcolor;
+                                color: $headingcol;
+                            }
+                        }
+                    }
+                }
+                /* =====***** banner css ends *****===== */

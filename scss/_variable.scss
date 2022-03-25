@@ -1,0 +1,49 @@
+$brandcolor: #fec600;
+$navfontcol: #ffffff;
+$pfontcol: #444444;
+$headingcol: #111111;
+$whitecol: white;
+$blackcol: black;
+$opensans: 'Open Sans',
+sans-serif;
+$raleway: 'Raleway',
+sans-serif;
+@mixin heading {
+    font-family: $raleway;
+    font-weight: 600;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+@mixin pfont {
+    font-family: $opensans;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@mixin ralewaymd20 {
+    font-family: $raleway;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+@mixin ralewaymd18 {
+    font-family: $raleway;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+@mixin ralewaymd16 {
+    font-family: $raleway;
+    font-weight: 600;
+    font-size: 20px;
+    color: $navfontcol;
+}
+
+@mixin transition {
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
